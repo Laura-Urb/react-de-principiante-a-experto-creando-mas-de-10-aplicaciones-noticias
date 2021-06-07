@@ -9,11 +9,12 @@ const useSelect = (stateInicial, opciones) => {
       value={state}
       onChange={(e) => setState(e.target.value)}
     >
-      {opciones.map((opcion) => (
-        <option key={opcion.value} value={opcion.value}>
-          {opcion.label}
-        </option>
-      ))}
+      {opciones &&
+        opciones.map((opcion) => (
+          <option key={opcion.value} value={opcion.value}>
+            {opcion.label}
+          </option>
+        ))}
     </select>
   );
 
